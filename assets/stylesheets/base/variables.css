@@ -18,11 +18,11 @@
   --spacing-base: 120px;
 
   /* Fonts families */
-  --font-head-regular: 'CircularStd Book', 'Helvetica', sans-serif;
-  --font-head-black: 'CircularStd Black', 'Helvetica', sans-serif;
-  --font-head-medium: 'CircularStd Medium', 'Helvetica', sans-serif;
-  --font-content-regular: 'Graphik Regular', 'Helvetica', sans-serif;
-  --font-content-medium: 'Graphik Medium', 'Helvetica', sans-serif;
+  --font-head-regular: 'Roboto', 'Helvetica', sans-serif;
+  --font-head-black: 'Roboto', 'Helvetica', sans-serif;
+  --font-head-medium: 'Roboto', 'Helvetica', sans-serif;
+  --font-content-regular: 'Roboto', 'Helvetica', sans-serif;
+  --font-content-medium: 'Roboto', 'Helvetica', sans-serif;
 
   /* Shadows */
   --shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);

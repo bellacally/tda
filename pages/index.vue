@@ -7,7 +7,10 @@
     <section class="banner">
       <div class="banner__title">
         <h1>The Digital Academy.</h1>
-        <p class="banner__title--catchline">Catch line Donec ac dui non justo gravida sodales. Curabitur porta ligula sit amet vulputate ornare.</p>
+        <p class="banner__title--catchline">A one-day learning event for digital professionals</p>
+        <br>
+          <p class="banner__title--catchline">数字人才一日沉浸式学习</p>
+
       </div>
       <div class="banner__countdown">
         <div class="banner__countdown--date">
@@ -96,7 +99,6 @@
     </section>
     <section id="intervenants" class="slider">
       <h2>The <span class="tag tag-yellow">instructors</span></h2>
-      <p class="slider__subtitle">Bla bla bla here</p>
       <div class="slider__slides">
         <div class="slider__slides--tabs gradient" @scroll="handleScroll">
           <div v-for="(attendee, index) in attendeesShuffled" :key="index" @click="activeTab = index" :class="['tab', activeTab === index ? 'active' : '']">
@@ -128,7 +130,9 @@
               </a>
             </div>
             <div class="content__description">
-              <span class="content__description--description animated fadeIn" :key="currentTab.description">{{ currentTab.description }}</span>
+              <span class="content__description--description animated fadeIn">{{ currentTab.description_en }}</span>
+              <br>
+              <span class="content__description--description animated fadeIn">{{ currentTab.description_cn }}</span>
             </div>
           </div>
         </div>
@@ -141,36 +145,47 @@
           <span class="shift--start">10:00</span>
           🤝
         </div>
+
+        <div :class="['planning__timeline--break shift', active.blueShift ? 'active' : '']" @mouseenter="active.blueCard = true" @mouseleave="active.blueCard = false">
+          <span class="shift--start">12:00</span>
+          ###
+        </div>
+
         <div :class="['planning__timeline--talk shift', active.blueShift ? 'active' : '']" @mouseenter="active.blueCard = true" @mouseleave="active.blueCard = false">
-          <span class="shift--start">17:00</span>
+          <span class="shift--start">13:00</span>
           🗣
         </div>
+
         <div :class="['planning__timeline--toast shift', active.redShift ? 'active' : '']" @mouseenter="active.redCard = true" @mouseleave="active.redCard = false">
           <span class="shift--start">17:30</span>
           🍸
           <span class="shift--end">19:00</span>
         </div>
+
       </div>
       <div class="planning__cards">
         <div id="meeting" :class="['planning__cards--card', active.greenCard ? 'active' : '']" @mouseenter="active.greenShift = true" @mouseleave="active.greenShift = false">
           <div class="head">
-            <div class="tag tag-green">Meeting</div>
-            <div class="hours">10:00 - 17:00</div>
+
+            <div class="tag tag-green">Workshops</div>
+            <div class="hours">10:00 - 12:00</div>
           </div>
           <p>Début de l’événement et de l’animation des stands</p>
         </div>
         <div id="talk" :class="['planning__cards--card', active.blueCard ? 'active' : '']" @mouseenter="active.blueShift = true" @mouseleave="active.blueShift = false">
           <div class="head">
-            <div class="tag tag-blue">Talk</div>
-            <div class="hours">17:00 - 17:30</div>
+            <div class="tag tag-blue">Lunch Break</div>
+            <div class="hours">12:00 - 13:00</div>
           </div>
           <p>L'esprit entrepreneur avec<br />Sylvain Tillon</p>
         </div>
         <div id="toast" :class="['planning__cards--card', active.redCard ? 'active' : '']" @mouseenter="active.redShift = true" @mouseleave="active.redShift = false">
           <div class="head">
-            <div class="tag tag-red">Networking</div>
-            <div class="hours">17:30 - 19:00</div>
+            <div class="tag tag-red">Workshops</div>
+            <div class="hours">13:00 - 17:30</div>
           </div>
+
+
           <p>Apéro de <br />fin de journée</p>
         </div>
       </div>
@@ -189,7 +204,7 @@
           <img src="../assets/icons/map.svg" alt="map icon">
           <div class="information__direction--content">
             <span>Location</span>
-            <a href="http://maps.google.com/maps?q=20+rue+des+capucins,+69001+lyon" target="_blank" rel="noreferrer noopener">How to get there</a>
+            <a href="https://map.baidu.com/poi/%E4%B8%96%E7%95%8C%E8%B4%B8%E6%98%93%E5%A4%A7%E5%8E%A6/@13524169.576603249,3641414.9812600003,19z?uid=f1f5cac5d64d779937b06ca5&primaryUid=17997717913066274815&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&querytype=detailConInfo&da_src=shareurl" target="_blank" rel="noreferrer noopener">How to get there</a>
           </div>
         </div>
         <a id="number5-58542912427" class="btn btn-white" @click="getId($event)">Register</a>
@@ -217,19 +232,19 @@ export default {
       loading: true,
       cards: [
         {
-          title: "Title 1 Donec ac dui",
+          title: "Who?",
           content:
-            "Description 1 Curabitur porta ligula sit amet vulputate ornare. Nulla augue quam, scelerisque at venenatis eu, mattis at ligula."
+            "The Digital Academy is created by DLG, the leading independent agency for international luxury brands and Le Wagon, the world’s most highly rated and product-centric coding boot camp.."
         },
         {
-          title: "Title 2 Lorem ipsum dolor",
+          title: "What?",
           content:
-            "Description 2 Nunc sollicitudin vehicula enim, vitae consequat leo fermentum congue. Donec placerat lacus id iaculis fringilla."
+            "It is a one-day learning event for digital professionals, featuring courses formulated to hone everything from one's social media to design and development skills.."
         },
         {
-          title: "Title 3 Curabitur blandit",
+          title: "Why?",
           content:
-            "Description 3 Vestibulum risus purus, sodales vitae ligula vitae, tincidunt vulputate ligula"
+            "Competition in the digital sector is intensifying in China, and individuals are faced with the uphill task of constantly upgrading themselves to stay relevant. As the first workshop series of its kind, The Digital Academy aims to groom and inspire the field’s best and brightest talents."
         }
       ],
       attendees: [],
@@ -939,24 +954,31 @@ export default {
       }
     }
     &--meeting {
-      grid-column: 1 / span 6;
+      grid-column: 1 / span 3;
       background-color: var(--color-lightgreen);
       &.active {
         background-color: #1edd8860;
       }
     }
     &--talk {
-      grid-column: 7 / span 1;
+      grid-column: 5 / span 4;
       background-color: var(--color-lightblue);
       &.active {
         background-color: #62ddf560;
       }
     }
     &--toast {
-      grid-column: 8 / span 3;
+      grid-column: 9 / span 4;
       background-color: var(--color-lightred);
       &.active {
         background-color: #fd101560;
+      }
+    }
+    &--break {
+      grid-column: 4 / span 1;
+      background-color: var(--color-lightpurple);
+      &.active {
+        background-color: 9fa5ea;
       }
     }
   }
@@ -965,6 +987,7 @@ export default {
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 25px;
     margin-top: 100px;
+
     #meeting {
       &.active {
         box-shadow: 0px 4px 15px #1edd8860;
@@ -976,6 +999,11 @@ export default {
       }
     }
     #toast {
+      &.active {
+        box-shadow: 0px 4px 15px #fd101560;
+      }
+    }
+    #break {
       &.active {
         box-shadow: 0px 4px 15px #fd101560;
       }
