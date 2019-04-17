@@ -9,7 +9,7 @@
         <h1>The Digital Academy.</h1>
         <p class="banner__title--catchline">A one-day learning event for digital professionals</p>
         <br>
-          <p class="banner__title--catchline">数字人才一日沉浸式学习</p>
+          <p class="banner__title--catchline">DLG和Le Wagon为在上海的数字领域的专业人士推出了一项全新的学习计划。</p>
 
       </div>
       <div class="banner__countdown">
@@ -46,8 +46,9 @@
           </div>
         </div>
         <div class="banner__countdown--buttons">
-          <a id="number3-58542912427" class="btn btn-red" @click="getId($event)">Register here</a>
-          <a href="#description" class="btn btn-white" v-smooth-scroll="{ duration: 1000, offset: -150 }">More info</a>
+       <!--    <a id="number3-58542912427" class="btn btn-red" @click="getId($event)">Register here</a> -->
+        <!--   <a href="#description" class="btn btn-white" v-smooth-scroll="{ duration: 1000, offset: -150 }">More info</a> -->
+          <a id="number3-58542912427" class="btn btn-white" href="https://lnkd.in/fjMVEwd">More info</a>
         </div>
       </div>
     </section>
@@ -78,13 +79,16 @@
       <div class="description__content">
         <h3>Welcome to the Digital Academy.</h3>
         <p class="description__content--text">
-          According to a recent study, the learning market in China has grown exponentially over the last five years. Projections put the number of people feeding the online learning machine in 2019 at over 387 million. Not only are the Chinese thirsty for more information and skills, they are more than willing to pay for it.
+          According to a recent study, the learning market in China has grown exponentially over the last five years. Projections put the number of people feeding the online learning machine in 2019 at over 387 million. If you are a Chinese digital professional who is constantly looking to improve yourself, at The Digital Academy, you will have all the digital skills you need to know to navigate the era of digital transformation in one place.
           <br/><br/>
-          But while online courses cover a variety of topics ranging from language to digital skills, few concentrate specifically on the luxury industry in China. With the nation accounting for around one-third of global luxury sales, it is now more important than ever to be equipped with the relevant skills to deal with this dynamic and ever-changing business.
+          根据最近的一项研究表明，中国的学习市场在过去五年中呈倍数增长。预测2019年使用在线学习机器人的人数将超过3.87亿。中国的专业年轻人士一直在寻求自我提升，但市场上有无数的课程可供选择， 在The Digtial Academy有你想要学的所有数字领域的专业人士最受雇主重视的技能。
           <br/><br/>
           What are you waiting for? As they all say, <strong>knowledge is power</strong>.
+          <br/><br/>
+          你还在等什么呢？ 知识就是力量！
         </p>
-        <a id="number4-58542912427" class="btn btn-red" @click="getId($event)">Register here</a>
+    <!--     <a id="number4-58542912427" class="btn btn-red" @click="getId($event)">Register here</a> -->
+        <a id="number4-58542912427" class="btn btn-red" href="https://jinshuju.net/f/7EDPFl">Register here</a>
       </div>
     </section>
     <section class="conduct">
@@ -148,7 +152,7 @@
 
         <div :class="['planning__timeline--break shift', active.blueShift ? 'active' : '']" @mouseenter="active.blueCard = true" @mouseleave="active.blueCard = false">
           <span class="shift--start">12:00</span>
-          ###
+          🍕
         </div>
 
         <div :class="['planning__timeline--talk shift', active.blueShift ? 'active' : '']" @mouseenter="active.blueCard = true" @mouseleave="active.blueCard = false">
@@ -207,7 +211,8 @@
             <a href="https://map.baidu.com/poi/%E4%B8%96%E7%95%8C%E8%B4%B8%E6%98%93%E5%A4%A7%E5%8E%A6/@13524169.576603249,3641414.9812600003,19z?uid=f1f5cac5d64d779937b06ca5&primaryUid=17997717913066274815&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&querytype=detailConInfo&da_src=shareurl" target="_blank" rel="noreferrer noopener">How to get there</a>
           </div>
         </div>
-        <a id="number5-58542912427" class="btn btn-white" @click="getId($event)">Register</a>
+      <!--   <a id="number5-58542912427" class="btn btn-white" @click="getId($event)">Register</a> -->
+        <a style="color: white" class="btn btn-red" href="https://lnkd.in/fjMVEwd">Register</a>
       </div>
     </section>
     <footer>
@@ -233,18 +238,24 @@ export default {
       cards: [
         {
           title: "Who?",
-          content:
-            "The Digital Academy is created by DLG, the leading independent agency for international luxury brands and Le Wagon, the world’s most highly rated and product-centric coding boot camp.."
+          content: [
+            "The Digital Academy is created by DLG, the leading independent agency for international luxury brands and Le Wagon, the world’s most highly rated and product-centric coding boot camp..",
+            "The Digital Academy由国际领先的奢侈品牌机构DLG和世界上评价最高的编程学校，以产品为中心的编程训练营Le Wagon共同发起。"
+          ]
         },
         {
           title: "What?",
-          content:
-            "It is a one-day learning event for digital professionals, featuring courses formulated to hone everything from one's social media to design and development skills.."
+          content: [
+            "It is a one-day learning event for digital professionals, featuring courses formulated to hone everything from social media to design and development skills..",
+            "这是一个面向数字专业人士的为期一天的学习活动，包括数字人才所需要的社交媒体到设计和开发技能的所有课程。"
+          ]
         },
         {
           title: "Why?",
-          content:
-            "Competition in the digital sector is intensifying in China, and individuals are faced with the uphill task of constantly upgrading themselves to stay relevant. As the first workshop series of its kind, The Digital Academy aims to groom and inspire the field’s best and brightest talents."
+          content: [
+            "Competition in the digital sector is intensifying in China, and individuals are faced with the uphill task of constantly upgrading themselves to stay relevant. As the first workshop series of its kind, The Digital Academy aims to groom and inspire the field’s best and brightest talents.",
+            "中国数字领域的竞争正在加剧，个人面临着不断提升自身以保持相关性的艰巨任务。作为The Digital Academy的第一个活动，我们旨在培养和激励该领域最优秀，最聪明的人才。"
+          ]
         }
       ],
       attendees: [],
